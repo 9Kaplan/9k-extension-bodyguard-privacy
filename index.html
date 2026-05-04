@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Privacy Policy | 9K Extension Bodyguard</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0c121c;
+        --bg-soft: #101a28;
+        --surface: #142033;
+        --surface-soft: #19283b;
+        --line: rgba(160, 180, 205, 0.16);
+        --line-strong: rgba(160, 180, 205, 0.24);
+        --text: #eef5f4;
+        --text-soft: #a9b7c7;
+        --text-muted: #7f8ea3;
+        --accent: #64d5bd;
+        --accent-soft: rgba(100, 213, 189, 0.12);
+        --warning-soft: rgba(219, 163, 91, 0.12);
+        --shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background: var(--bg);
+      }
+
+      body {
+        margin: 0;
+        min-width: 320px;
+        background:
+          radial-gradient(circle at top left, rgba(100, 213, 189, 0.13), transparent 34rem),
+          radial-gradient(circle at top right, rgba(86, 126, 194, 0.12), transparent 30rem),
+          linear-gradient(180deg, #0c121c 0%, #0b1119 100%);
+        color: var(--text);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .page {
+        width: min(960px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 48px 0;
+      }
+
+      .hero {
+        display: grid;
+        gap: 22px;
+        margin-bottom: 22px;
+        padding: 34px;
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        background:
+          linear-gradient(135deg, rgba(30, 47, 70, 0.88), rgba(14, 23, 36, 0.94));
+        box-shadow: var(--shadow);
+      }
+
+      .brand-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        min-width: 0;
+        gap: 14px;
+        align-items: center;
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 48px;
+        height: 48px;
+        flex: 0 0 auto;
+        place-items: center;
+        border: 1px solid rgba(100, 213, 189, 0.34);
+        border-radius: 16px;
+        background:
+          linear-gradient(180deg, rgba(100, 213, 189, 0.18), rgba(100, 213, 189, 0.07));
+        color: var(--accent);
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        width: fit-content;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 10px;
+        border: 1px solid rgba(100, 213, 189, 0.22);
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: #b9f3e7;
+        font-size: 13px;
+        font-weight: 650;
+      }
+
+      .eyebrow::before {
+        width: 7px;
+        height: 7px;
+        border-radius: 999px;
+        background: var(--accent);
+        box-shadow: 0 0 0 4px rgba(100, 213, 189, 0.12);
+        content: "";
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        margin-top: 18px;
+        max-width: 780px;
+        font-size: clamp(34px, 6vw, 58px);
+        line-height: 1.04;
+        font-weight: 650;
+        letter-spacing: -0.03em;
+      }
+
+      .hero p {
+        max-width: 760px;
+        color: var(--text-soft);
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .meta {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 10px;
+      }
+
+      .meta-card {
+        min-width: 0;
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: rgba(9, 17, 29, 0.56);
+      }
+
+      .meta-card span {
+        display: block;
+        color: var(--text-muted);
+        font-size: 12px;
+        font-weight: 650;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .meta-card strong {
+        display: block;
+        margin-top: 4px;
+        overflow-wrap: anywhere;
+        color: var(--text);
+        font-size: 14px;
+        font-weight: 650;
+      }
+
+      .content {
+        display: grid;
+        gap: 18px;
+      }
+
+      section {
+        padding: 26px;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: rgba(20, 32, 51, 0.78);
+      }
+
+      h2 {
+        margin-bottom: 12px;
+        color: var(--text);
+        font-size: 22px;
+        line-height: 1.25;
+        font-weight: 650;
+        letter-spacing: -0.01em;
+      }
+
+      h3 {
+        margin: 18px 0 8px;
+        color: #dce8ed;
+        font-size: 15px;
+        line-height: 1.35;
+        font-weight: 650;
+      }
+
+      section p {
+        color: var(--text-soft);
+      }
+
+      ul {
+        display: grid;
+        gap: 8px;
+        margin: 14px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      li {
+        position: relative;
+        padding-left: 22px;
+        color: var(--text-soft);
+      }
+
+      li::before {
+        position: absolute;
+        top: 0.72em;
+        left: 0;
+        width: 7px;
+        height: 7px;
+        border-radius: 999px;
+        background: rgba(100, 213, 189, 0.72);
+        content: "";
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .callout {
+        border-color: rgba(100, 213, 189, 0.22);
+        background:
+          linear-gradient(180deg, rgba(100, 213, 189, 0.10), rgba(20, 32, 51, 0.78));
+      }
+
+      .plain-list li::before {
+        background: rgba(160, 180, 205, 0.58);
+      }
+
+      .permissions {
+        display: grid;
+        gap: 12px;
+        margin-top: 14px;
+      }
+
+      .permission-card {
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: rgba(9, 17, 29, 0.44);
+      }
+
+      .permission-card code {
+        display: inline-flex;
+        margin-bottom: 8px;
+        padding: 4px 8px;
+        border: 1px solid rgba(100, 213, 189, 0.22);
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: #bff4e9;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 13px;
+      }
+
+      .footer {
+        padding: 24px 0 0;
+        color: var(--text-muted);
+        font-size: 13px;
+        text-align: center;
+      }
+
+      .footer p + p {
+        margin-top: 6px;
+      }
+
+      @media (max-width: 760px) {
+        .page {
+          width: min(100% - 20px, 960px);
+          padding: 20px 0;
+        }
+
+        .hero,
+        section {
+          padding: 22px;
+          border-radius: 18px;
+        }
+
+        .brand-row,
+        .brand {
+          align-items: flex-start;
+        }
+
+        .meta,
+        .split {
+          grid-template-columns: 1fr;
+        }
+
+        h1 {
+          font-size: 36px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div class="brand-row">
+          <div class="brand">
+            <div class="brand-mark" aria-hidden="true">9K</div>
+            <div>
+              <p class="eyebrow">Local-only Chrome extension</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h1>Privacy Policy for 9K Extension Bodyguard</h1>
+          <p>
+            9K Extension Bodyguard helps users review installed Chrome extensions locally.
+            It explains declared permissions, site access patterns, and local permission
+            changes in plain language.
+          </p>
+        </div>
+
+        <div class="meta" aria-label="Policy details">
+          <div class="meta-card">
+            <span>Publisher</span>
+            <strong>9K Studio</strong>
+          </div>
+          <div class="meta-card">
+            <span>Contact</span>
+            <strong><a href="mailto:contact@9kstudio.com">contact@9kstudio.com</a></strong>
+          </div>
+          <div class="meta-card">
+            <span>Last updated</span>
+            <strong>May 5, 2026</strong>
+          </div>
+        </div>
+      </header>
+
+      <div class="content">
+        <section class="callout" aria-labelledby="overview">
+          <h2 id="overview">Overview</h2>
+          <p>
+            9K Extension Bodyguard is designed to keep data on the user's device.
+            It reviews installed extensions only, and its reports are based on declared
+            permissions exposed by Chrome, not live extension behavior.
+          </p>
+          <p>
+            The extension does not sync data to a server and does not send extension
+            review data outside the device.
+          </p>
+        </section>
+
+        <section aria-labelledby="data-processed">
+          <h2 id="data-processed">Data Processed Locally</h2>
+          <p>
+            9K Extension Bodyguard processes extension metadata provided by Chrome's
+            extension management API and local user settings saved by the extension.
+          </p>
+
+          <div class="split">
+            <div>
+              <h3>Installed extension information</h3>
+              <ul>
+                <li>Installed extension names.</li>
+                <li>Extension versions.</li>
+                <li>Enabled or disabled state.</li>
+                <li>Install type when Chrome provides it.</li>
+                <li>Extension icons when Chrome provides them.</li>
+                <li>Declared API permissions.</li>
+                <li>Declared site access patterns.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Local user data</h3>
+              <ul>
+                <li>Local notes.</li>
+                <li>Trust marks.</li>
+                <li>Welcome or intro screen state.</li>
+                <li>Language preference.</li>
+                <li>Local permission review snapshots.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section aria-labelledby="storage">
+          <h2 id="storage">Where Data Is Stored</h2>
+          <p>
+            Data is stored in <code>chrome.storage.local</code> on the user's device.
+            9K Extension Bodyguard does not sell this data, share it with third parties,
+            or sync it to a server.
+          </p>
+        </section>
+
+        <section aria-labelledby="not-accessed">
+          <h2 id="not-accessed">What 9K Extension Bodyguard Does Not Do</h2>
+          <p>9K Extension Bodyguard does not:</p>
+          <ul class="plain-list">
+            <li>Scan websites.</li>
+            <li>Read page content.</li>
+            <li>Read browsing history.</li>
+            <li>Read cookies.</li>
+            <li>Use content scripts.</li>
+            <li>Request host permissions.</li>
+            <li>Monitor live browsing behavior.</li>
+            <li>Use analytics.</li>
+            <li>Show ads.</li>
+            <li>Call remote APIs.</li>
+            <li>Make AI calls.</li>
+            <li>Sell user data.</li>
+            <li>Share user data with third parties.</li>
+            <li>Sync data to a server.</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="permissions">
+          <h2 id="permissions">Requested Chrome Permissions</h2>
+          <p>
+            9K Extension Bodyguard requests only the Chrome permissions needed for its
+            local extension review dashboard.
+          </p>
+
+          <div class="permissions">
+            <div class="permission-card">
+              <code>management</code>
+              <p>
+                Used to read installed extension names, versions, enabled state, icons,
+                and declared permissions so the dashboard can explain extension access locally.
+              </p>
+            </div>
+
+            <div class="permission-card">
+              <code>storage</code>
+              <p>
+                Used to save local notes, trust marks, welcome screen state, language
+                preference, and local permission review snapshots on this device.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section aria-labelledby="sharing">
+          <h2 id="sharing">Data Sharing and Sale</h2>
+          <p>
+            9K Extension Bodyguard does not sell user data. It does not share user data
+            with third parties. It does not use analytics, advertising, tracking, remote
+            reporting services, remote APIs, or AI calls.
+          </p>
+        </section>
+
+        <section aria-labelledby="control">
+          <h2 id="control">User Control</h2>
+          <p>
+            Users can edit or remove local notes in the dashboard, remove trust marks,
+            reset the welcome intro state, reset permission history, and clear local data
+            from Settings. Users can also mark permission changes reviewed, which replaces
+            the stored local permission snapshot with the current declared extension access.
+          </p>
+          <p>
+            Uninstalling 9K Extension Bodyguard removes its extension data according to
+            Chrome's extension storage behavior.
+          </p>
+        </section>
+
+        <section aria-labelledby="limitations">
+          <h2 id="limitations">Limitations</h2>
+          <p>
+            9K Extension Bodyguard reviews declared permissions exposed by Chrome. It does
+            not inspect live extension behavior and does not make guarantees about an
+            extension's behavior.
+          </p>
+        </section>
+
+        <section aria-labelledby="changes">
+          <h2 id="changes">Changes to This Policy</h2>
+          <p>
+            Future changes to this policy should be documented with the extension version
+            and date.
+          </p>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <p>9K Extension Bodyguard is published by 9K Studio.</p>
+        <p>Contact: <a href="mailto:contact@9kstudio.com">contact@9kstudio.com</a></p>
+      </footer>
+    </main>
+  </body>
+</html>
